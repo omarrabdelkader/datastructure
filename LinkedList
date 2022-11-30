@@ -4,7 +4,8 @@
 
 A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers.
 
-So, it is important to mention that a linked list is a linear data structure, so it is not stored together, or in a sequence. Each node in a linked list can before stored in a different address in the computer's memory. For this specific reason, we do use pointers in linked lists.
+So, it is important to mention that a linked list is a linear data structure, so it is not stored together, or in a sequence. 
+Each node in a linked list can before stored in a different address in the computer's memory. For this specific reason, we do use pointers in linked lists.
 
 What are pointers? 
 
@@ -14,7 +15,8 @@ As we have mentioned before, a linked list consists of nodes. What is a node? We
 
 Value represents the value inside of the node, while the next represents the pointer which directs to the next node. 
 
-To make it more comprehensive, we can visualize a node as an object as we have mentioned before and it has two properties which are, 'value' and 'next'. the Next property has a value which is the next next. So, next is considered to be a pointer which points to the address of the next node. 
+To make it more comprehensive, we can visualize a node as an object as we have mentioned before and it has two properties which are, 'value' and 'next'. 
+The Next property has a value which is the next next. So, next is considered to be a pointer which points to the address of the next node. 
 
 In the Linked List section, I have learnt to perform numerous things in the linked list:
 
@@ -33,5 +35,10 @@ d) Setting a new value to a node
 e) Inserting a new node at a specific index
 
 f) Reversing a node
+
+
+# Creation of Node and Linked List 
+
+
 
 
