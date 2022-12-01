@@ -1,4 +1,4 @@
-##Linked List
+Linked List
 
 #Definition
 
@@ -17,6 +17,9 @@ Value represents the value inside of the node, while the next represents the poi
 
 To make it more comprehensive, we can visualize a node as an object as we have mentioned before and it has two properties which are, 'value' and 'next'. 
 The Next property has a value which is the next next. So, next is considered to be a pointer which points to the address of the next node. 
+
+
+
 
 In the Linked List section, I have learnt to perform numerous things in the linked list:
 
@@ -37,8 +40,53 @@ e) Inserting a new node at a specific index
 f) Reversing a node
 
 
-# Creation of Node and Linked List 
 
+A linked list consists of three main parts which are a head, tail and length. 
+
+Head is a pointer which points to the first node, and we can visualize it as an object that its next is equal to the first node. 
+
+A tail is a pointer which points to the last node, and we can visualize it as an object that its next is equal to nullptr. 
+
+Length defines how many nodes are in the Linked List.
+
+
+Creation of Node and Linked List 
+
+
+In the creation of a node class, it must has two properties as we have mentioned before. A next which has Node* as it's a pointer and a value which has an int data type.
+We create an constructor in order to create numerous instances out of this class, Node. In the constructor, there is an argument which has a data type int to pass the int value. 
+The node's value must be equal to this val, and we make the next ptr equals to nullptr. 
+
+In the creation of a linked list class, it must has three main properties which are head, tail and length. 
+In the creation of the first instance out of the node class, we pass a value which is passed from the instances of the LinkedList class. Then, we pass it to the Node instance.
+In the first node of a linked list, we make the head and tail pointers equal (pointing to) the first node, owing to the fact that it is the only node in the linked list.
+
+
+class Node {
+
+// each instance will have two properties which are 
+
+public: 
+int value;
+Node* next;
+
+// create a constructor in order to create instances out of the Node class, we pass a val through the constructor
+
+Node(val) {
+// we pass the val to the value property, and we set the ptr to be nullptr as this will be the first Node in the linked list
+this->value = val;
+next = nullptr;
+}
+
+}
+
+
+
+
+
+Appending a Node in the Linked List
+
+What does appending mean? It is adding a node, at which index? 
 
 
 
