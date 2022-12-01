@@ -4,7 +4,7 @@ Definition
 
 A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers.
 
-So, it is important to mention that a linked list is a linear data structure, so it is not stored together, or in a sequence. 
+So, it is important to mention that a linked list is a linear data structure, so it is not stored together, nor in a sequence. 
 Each node in a linked list can before stored in a different address in the computer's memory. For this specific reason, we do use pointers in linked lists.
 
 What are pointers? 
