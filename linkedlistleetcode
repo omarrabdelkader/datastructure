@@ -1,0 +1,50 @@
+203. Remove Linked List Elements
+
+ELABORATION:
+
+We have got a linked list, and we want to remove each and every node that its value is equal to the demanded value. Easy one. 
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+    
+    // We have got make sure that the first node in the linked list is not a nullptr
+    // If it is, then there is nothing do in here, lol
+    if(!head) return head;
+    
+    // We want to make sure we remove every node that is equal to the val.
+    
+    while(head && head->value == val){
+    head = head->next;
+    }
+    
+    // So, we have removed (skipped) every node that is equal to the val.
+    // temp pointer now points at the first node (after the removal of other nodes)
+    ListNode*  temp = head; 
+    
+    while(temp){
+    if( temp-> next && temp->next->val == val){
+    temp->next-> = temp->next->next;
+    } else {
+    temp = temp->next;
+    }
+    
+    return head;
+    }
+    
+    So, the leasson learnt from this LeetCode question is:
+    
+    We don't actually delete a node, we actually skip this node and set the head to the next node. Also, we need to make sure every time that the node is not a nullptr.
+    This trick I always forget, lol. 
+    
+    }
