@@ -123,3 +123,30 @@ public:
    }
     
   }
+  
+  
+  ------- 
+  
+  I'd like to summarize what I've learnt from these LeetCode questions (to be continued) :
+  
+  a) I have learnt that the removal of a node means actually skipping a node, by making the current node equals to its next node.
+       And we, now, know how to remove a node with a specific value, but this is not the concept of this question. The main concept is,
+       learning how to remove a node whatever the case is. 
+       
+  b) We have learnt how to get the middle node with the two-pointer technique, there is this algorithm that I've learnt from Nick White. 
+      Set two pointers, one which movies only one step and the other moves two steps forward. When the second finishes, the first one will stop
+      at the middle node. Thanks bro, again.
+  
+  c) Removing the duplicated node from the linked list. I puzzled it out as a reason of understanding the concept of deleteting a node. 
+      We remove the second duplicated node in the array if the first and second are duplicated. That is it. If this doesn't match, we traversal
+      to the next node and check if its next is the same. 
+      
+      
+      
+      Haha, I recall my conversation with my friend, Zoma. I used to tell him how I detest the Linked List data structure. Back then, I couldn't understand why. 
+        But now, I do. It's because of the ptr concept people. I don't know how software developers should understand Linked List without studying a structured
+        programming language. Linked List is based on ptrs, lol.
+        
+        
+  
+  
