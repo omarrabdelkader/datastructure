@@ -88,6 +88,38 @@ public:
     As long as we loop through the linked list. The first pointer points to the next node, while the second pointer points to the next's next. 
     
     So, when the second pointer stops, the first pointer will be at the middle element. Try it out in a piece of paper to fully comprehend this algorithm.
-
     
+    
+    
+    
+    83. Remove Duplicates from Sorted List
+    
+    /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+   
   
+   ListNode* temp = head;
+   
+   while(temp & temp -> next){
+   // if the current node's value is equal to the next node's value, we remove the next node's value
+   if(temp->val == temp->next->val){
+   //delete the next value
+   temp->next = temp->next->next;
+   } else {
+   //else traverse noramlly 
+   temp = temp->next;
+   }
+   }
+    
+  }
