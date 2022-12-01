@@ -48,3 +48,46 @@ public:
     This trick I always forget, lol. 
     
     }
+    
+    
+    
+    876. Middle of the Linked List
+    
+    I have used the two-pointer technique in order to puzzle out this problem. Actually, this algorithm can be used to get the middle element of any array. Nick White, thank you bro. 
+    
+    /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+    
+    // two pointers 
+    ListNode* first = head;
+    ListNode* second = head;
+    
+    while(second && second-> next ){
+    first = first-> next;
+    second = second->next -> next;
+    }
+    
+    return first;
+    }
+    
+    This algorithm is so great in getting the middle element in any array, using the two-pointer technique (the nested loop techenique is bad, my peeps)
+    
+    We create two pointers which are first and second. As long as second isn't nullptr, nor the next node, we keep looping.
+    
+    As long as we loop through the linked list. The first pointer points to the next node, while the second pointer points to the next's next. 
+    
+    So, when the second pointer stops, the first pointer will be at the middle element. Try it out in a piece of paper to fully comprehend this algorithm.
+
+    
+  
