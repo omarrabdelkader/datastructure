@@ -72,7 +72,7 @@ Node* next;
 
 // create a constructor in order to create instances out of the Node class, we pass a val through the constructor
 
-Node(val) {
+Node(int val) {
 // we pass the val to the value property, and we set the ptr to be nullptr as this will be the first Node in the linked list
 this->value = val;
 next = nullptr;
@@ -80,13 +80,90 @@ next = nullptr;
 
 }
 
+class LinkedList {
+// as we've mentioned before, a linked list consists of three part which are
+private:
+Node* head;
+Node* tail;
+int length;
 
 
+public:
+LinkedList(int val){
+// we set both ptrs, head and tail, to the new node. In other words, the head and tail object both hold the newNode inside of them.
+Node* newNode = new Node(val);
+this-> head = newNode;
+this-> tail = newNode;
+length = 1;
+}
+}
 
 
 Appending a Node in the Linked List
 
-What does appending mean? It is adding a node, at which index? 
+What does appending mean? It is adding a node, at which index? The last one, so we are going to set the ptr of the last node (tail) to the new node we have created.
+
+void appened(int val){
+Node* newNode = new Node(val);
+
+if(length == 0) {
+head = newNode;
+tail = newNode;
+} else {
+tail.next = newNode;
+
+// Now, in order to define the last node in the element, which is the new node, we have got to set it as a the new tail
+
+tail = newNode;
+}
+length++;
+}
+
+
+Prepending a Node in the Linked List
+
+What does a prepending mean? It is adding a node, at which index? The first one, so we are going to the next point of the new Node to the first node in the linked list.
+
+void prepend(int val) {
+Node* newNode = new Node(val);
+if(length == 0) {
+head = newNode;
+tail = newNode;
+} else {
+newNode->next = head;
+head = newNode;
+}
+length++;
+}
+
+Getting a Node in the Linked List by its index
+
+Node* get(int index) {
+Node* temp = head;
+
+for(int i =0; i < length; i++){
+temp = temp->next;
+}
+return temp;
+}
+
+Setting a new value by its index
+
+bool set(int val, int index) {
+*Node temp = get(index);
+
+if(temp) {
+temp->next = val;
+return true;
+}
+return false;
+}
+
+Reversing the whole linked list and this, my peeps, is considered to be the hardest
+
+}
+
+
 
 
 
