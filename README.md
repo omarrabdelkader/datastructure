@@ -2,7 +2,7 @@
 
 # Introduction
 
-Hello, world. I'm gargerius, a developer who has been studying algorithms and data structures in Java for more than six months. To be honest, Java is not a good language to understand programming and I should have listened to my friend, Hegz. I do not recommend it, at all. I, currently, loathe this language and this is the reason why I have decided to study C++ in order to comprehend how a structured programming language works. I'd like to thank Bro Code for educating me numerous things, he is cool peeps. This will be my data structure diariy, lol. My friend, Zoma, keeps telling me how I'm on my way to become like his friends in uni, heck. I'm becoming a geek. 
+Hello, world. I'm gargerius, a developer who has been studying algorithms and data structures in Java for more than six months. To be honest, Java is not a good language to understand programming and I should have listened to my friend, Hegz. I do not recommend it, at all. I, currently, loathe this language and this is the reason why I have decided to study C++ in order to comprehend how a structured programming language works. I'd like to thank Bro Code for educating me numerous things, he is cool peeps. This will be my data structure diary, lol. My friend, Zoma, keeps telling me how I'm on my way to become like his friends in uni, heck. I'm becoming a geek. 
 
 Bro Code's channel: 
 https://www.youtube.com/@BroCodez
