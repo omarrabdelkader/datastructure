@@ -140,52 +140,55 @@ public:
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-     
-//     We are creating a new linked list to push inside of it nodes in a sorted way
-        ListNode* temp = new ListNode(0);
-//         current is used to traverse inside of the linked list
-        ListNode* current = temp;
         
-//         as long as list1 & list2 aren't nullptrs 
+//         Create a linked list where you can push all node in a sorted order
+        ListNode* temp_node = new ListNode(0);
+        
+//         Set a temp pointer at the head of the temp linked list in order to traverse
+//       
+        ListNode* current = temp_node;
+        
+//         list1 & list2 represent two different linked lists
+//         also, they are the head of both linked lists 
+//         as long as ptrs aren't nullptrs
         while(list1 && list2){
-//         list1 and list2 represent two linked lists and also the head of each list
+            
+//             If the list1's val < list2's, then push make it current's next
             if(list1->val < list2->val){
                 current->next = list1;
+//                 travese to the next node
                 list1 = list1->next;
             } else {
-                current-> next = list2;
+                current->next = list2;
                 list2 = list2->next;
             }
             
-//      If list1's value is less than list2's, add it to the temp_node's linked list
-//      So, it can be sorted
+//             When we add a new node, we set the current ptr at it
+//             Why? You will know in the next step
             
             current = current->next;
-            
-//      Once we push the node inside, we traverse the current ptr to the newly-added-node
-            
-            
         }
-//         In the if condition there is a problem which is
-//         the while condition could stop with finishing off one of the linked lists
-//         So, we've got to make sure one of the linked lists is finished off
+        
+//         The while loop might finish before finishing off either the list1's node or list2's
+//         So, we've got to make sure 
         
         if(list1){
+//             If there is still node in the list1
+//             push it to the current's next
+//             that's why we set the current pointer to the end node
             current->next = list1;
             list1 = list1->next;
         }
         
         if(list2){
-            current->next = list2;
+            current->next =list2;
             list2 = list2-> next;
         }
-        
-//         return the head which represents the linked list;
-        
-        return temp->next;
+        return temp_node->next;
     }
     
 };
+    
     
     
   
@@ -205,6 +208,10 @@ public:
   c) Removing the duplicated node from the linked list. I puzzled it out as a reason of understanding the concept of deleteting a node. 
       We remove the second duplicated node in the array if the first and second are duplicated. That is it. If this doesn't match, we traversal
       to the next node and check if its next is the same. 
+      
+      
+  d) How to merge and sort two linked lists! In order to merge them, we create a temp linked list, then we push the nodes of the first and second linked lists. 
+      Then, we traverse. Then, we've got to make sure that both nodes are done. We make a condition to make sure if they are done. 
       
       
       
