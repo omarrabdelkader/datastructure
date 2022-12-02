@@ -125,6 +125,71 @@ public:
   }
   
   
+  21. Merge Two Sorted Lists
+  
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+     
+//     We are creating a new linked list to push inside of it nodes in a sorted way
+        ListNode* temp = new ListNode(0);
+//         current is used to traverse inside of the linked list
+        ListNode* current = temp;
+        
+//         as long as list1 & list2 aren't nullptrs 
+        while(list1 && list2){
+//         list1 and list2 represent two linked lists and also the head of each list
+            if(list1->val < list2->val){
+                current->next = list1;
+                list1 = list1->next;
+            } else {
+                current-> next = list2;
+                list2 = list2->next;
+            }
+            
+//      If list1's value is less than list2's, add it to the temp_node's linked list
+//      So, it can be sorted
+            
+            current = current->next;
+            
+//      Once we push the node inside, we traverse the current ptr to the newly-added-node
+            
+            
+        }
+//         In the if condition there is a problem which is
+//         the while condition could stop with finishing off one of the linked lists
+//         So, we've got to make sure one of the linked lists is finished off
+        
+        if(list1){
+            current->next = list1;
+            list1 = list1->next;
+        }
+        
+        if(list2){
+            current->next = list2;
+            list2 = list2-> next;
+        }
+        
+//         return the head which represents the linked list;
+        
+        return temp->next;
+    }
+    
+};
+    
+    
+  
+  
   ------- 
   
   I'd like to summarize what I've learnt from these LeetCode questions (to be continued) :
