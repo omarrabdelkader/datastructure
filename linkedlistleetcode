@@ -197,6 +197,9 @@ public:
   
   I'd like to summarize what I've learnt from these LeetCode questions (to be continued) :
   
+  Note: In LeetCode, or whatever platform you're solving problems in it. They won't give you the length of the linked list, so use while loop instead of
+        the for loop. It's much easier and it makes more sense, lol.
+  
   a) I have learnt that the removal of a node means actually skipping a node, by making the current node equals to its next node.
        And we, now, know how to remove a node with a specific value, but this is not the concept of this question. The main concept is,
        learning how to remove a node whatever the case is. 
