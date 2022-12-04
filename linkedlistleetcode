@@ -253,7 +253,9 @@ public:
   d) How to merge and sort two linked lists! In order to merge them, we create a temp linked list, then we push the nodes of the first and second linked lists. 
       Then, we traverse. Then, we've got to make sure that both nodes are done. We make a condition to make sure if they are done. 
       
-      
+   
+  e) An advice I'd like to point out is, never leave a LeetCode question without understanding every code line in it. Also, write down every single line 
+        and visualize how the code works. 
       
       Haha, I recall my conversation with my friend, Zoma. I used to tell him how I detest the Linked List data structure. Back then, I couldn't understand why. 
         But now, I do. It's because of the ptr concept people. I don't know how software developers should understand Linked List without studying a structured
