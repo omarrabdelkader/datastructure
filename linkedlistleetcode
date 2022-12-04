@@ -218,6 +218,15 @@ public:
         return true;
     }
 };
+
+// This question was tricky one, to be honest. However, Gayele McDowell, the author of Cracking the Coding Interview, had elaborated the question
+   and I could comprehend it. Well, in order to make sure that there is a cycle in the linked list we can mark each el node and see if there is a 
+   specifc node that had been repeated. Sadly, that's a bad algorithm. We could instead solve it with the two-pointer techinque. How?
+   Visualize that there are two cars, a fast and slow one. Both take the same road. If there is a cycle, they would both roll in the same cycle. 
+   At some point, both pointers will be at the same point. 
+   
+   I, actually, took some time to understand this algorithm. It is a classical question in Linked List, and an easy one. But, I did not want to leave
+   the question without grasping every single code line in this algorithm.
     
   
   
