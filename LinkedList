@@ -211,6 +211,12 @@ tail = nullptr;
 }
 
 
+Things I have noticed in most questions:
+
+a) You will need a temp ptr or two ptrs to solve a linked list problem
+b) temp node is used in order to traverse all over the linked list
+c) all questions are based on the four known methods of a linked list list 
+
 
 
 
