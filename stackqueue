@@ -1,0 +1,95 @@
+I had this conversation with Zoma about OOP, and we were discussing about that some CS students do not jack shit about OOP, which is so weird for me.
+  He replied, "Yeah, it is". Then, he continued saying, "Let me tell you something, in our fresh year, we have never learnt something about built-in methods". 
+  I was like, how? He replied, "In Java, there is a built-in methods for the stack class in order to pop and push elements. Right? We didn't know anything about them. 
+  They'd taught us to develop these methods by ourselves, first" 
+  
+That, my people, was so mind-blowing. Yeah, I've learnt how to do bubble sorting and stuff like that without using the sort method. But, stacks' methods? 
+  That has to be so fun to learn. Moreover, this is the reason why I recommend learning algorithms and data stuctures in C++. You develop stack methods by yourself, there 
+  is no built-in methods.
+  
+  
+  
+  Stacks
+  
+  Stack is a linear data structure which follows a particular order in which the operations are performed. The order is LIFO.
+  
+  (geekforgeeks: https://www.geeksforgeeks.org/stack-data-structure/)
+  
+  Stack can be used in a lot of cool stuff, like browsers. Cool.
+  
+  
+  #include <iostream>
+#include <string>
+
+class Node {
+public:
+	int value;
+	Node* next;
+
+	Node(int val) {
+		this->value = val;
+		next = nullptr;
+	}
+};
+
+class Stack {
+private:
+
+	Node* top;
+	int height;
+
+public:
+	Stack(int val) {
+
+		Node* newNode = new Node(val);
+		top = newNode;
+		height = 1;
+
+	}
+
+	void printStack() {
+		Node* temp = top;
+
+		while (temp) {
+			std::cout << temp->value << std::endl;
+
+			temp = temp->next;
+		}
+	}
+
+	void push(int val) {
+		Node* poppedNode = new Node(val);
+
+		if (height == 0) poppedNode = top;
+		poppedNode->next = top;
+		top = poppedNode;
+		height++;
+	}
+
+	int pop() {
+
+		if (height == 0) return INT_MIN;
+		
+		Node* temp = top;
+		int poppedNodeValue = top->value;
+		top = top->next;
+		delete temp;
+		height--;
+		return poppedNodeValue;
+	}
+};
+
+int main() {
+
+	Stack* newStack = new Stack(4);
+
+	newStack->push(10);
+
+	newStack->pop();
+
+	newStack->printStack();
+
+	return 0;
+}
+
+
