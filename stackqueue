@@ -102,4 +102,12 @@ int main() {
 	return 0;
 }
 
+// A question might hit your mind in the pop part. As we are using the linked list data structure as a stack. Moreover, we use the head of the linked list as
+    the top of the stack in order to pop and push the stack, which makes sense. But, why? The answer is, Big O Notation. 
+    
+//  As we have mentioned before, removing and setting a new head to the linked list its Big O Notation is O(1) as the number of operations is constant whatever
+    the number of nodes. In the other hand, the removal of the tail of the linked list is O(N) as we need to traverse through all nodes until reach to the 
+    last node. 
+    
+   
 
