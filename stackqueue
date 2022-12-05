@@ -67,6 +67,16 @@ public:
 	}
 
 	int pop() {
+	
+	
+	        // When you look at the reason behind making to pointers in here!
+		// We created a temp pointer which is equal to top 
+		// so we have to pointers top and temp pointing at the first node
+		//we say that popped value that we want to remove is = top->value
+		// then we move the top pointer to the next node
+		// temp pointer is still pointing the first node
+		// delete temp to remove that node
+
 
 		if (height == 0) return INT_MIN;
 		
