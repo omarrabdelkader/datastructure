@@ -2,3 +2,179 @@ INTRODUCTION
 
 Hello, friends! I've been away for long. I apologize! But, I just wanted to take a break from coding, actually. I have been coding for a year now, non-stop. Also, I've
  discovered something new which is, VIM. Oh lord. Anyways. In this part, I will be expounding the data structure, Tree.
+ 
+ 
+
+#include <iostream>
+
+
+class Node {
+public:
+    int value;
+    Node* left;
+    Node* right;
+
+    Node(int val) {
+        this->value = val;
+        left = nullptr;
+        right = nullptr;
+    }
+
+};
+
+class BinarySearchTree {
+public:
+    Node* root;
+// Each Binary Search Tree needs a root that points to their child, it's a requirment. Like, a head in the Linked List.
+public:
+    BinarySearchTree() {
+ //   Node* newNode = new Node(val);
+
+ //    root = newNode;
+    //There is another way
+
+
+        root = nullptr;
+
+        // we add the root by the insert method
+    }
+
+
+    bool insert(int val){
+        Node* newNode = new Node(val);
+        if (!root) {
+            root = newNode;
+            return true;
+        };
+
+        Node* temp = root;
+
+        while (true) {
+            // duplication of nodes
+            if (newNode->value == temp->value) return false;
+            
+            if (newNode->value < temp->value) {
+                // case: when there's no left-child
+                if (!temp->left) {
+                    temp->left = newNode;
+                    return true;
+                }
+
+                // the other case: when there's a left child
+
+                temp = temp->left;
+
+                // the end: it runs again as it's a while loop! It checks everything from the scratch!
+            }
+            // if it's larger than temp->value
+            else {
+                if (!temp->right) {
+                    temp->right = newNode;
+                    return true;
+                }
+                temp = temp->right;
+            }
+        }
+
+    }
+
+    bool contains(int val) {
+        if (!root) return false;
+        Node* temp = root;
+
+        while (temp) {
+            if (val < temp->value) {
+                temp = temp->left;
+            }
+            else if (val > temp->value) {
+                temp = temp->right;
+            }
+            else {
+                // val = node->val
+                std::cout << "Yes, it cotains the number: " << val;
+                return true;
+            }
+        }
+
+        return false;
+    }
+};
+
+int main()
+{
+    BinarySearchTree* myBTS = new BinarySearchTree();
+
+    myBTS->insert(21);
+    myBTS->insert(24);
+    myBTS->insert(16);
+    myBTS->insert(19);
+
+    std::cout << myBTS->contains(21) << std::endl;
+
+    
+
+    std::cout << "Root:" << myBTS->root->value << std::endl;
+}
+
+// A tree which contains nodes and each node has either two childs or zero, are called Full. If any node has only one child, it's not Full.
+// A Full Tree which their childs has two nodes (doesn't contain zero childs) is a called Full and Perfect.
+//Note children that has no childs are called leafs.
+
+//Binary Search Tree, the right node must be > the parent and the left one must be < parent.
+// In Binary Search Tree, child that is in the left is going to be < the main parent and vice verse
+
+// Imagine we have three layers of Binary Tree, and in order to reach the third layers. It takes three steps to do so.
+// Each step is a power of 1, then you increment 1 in each step. So, it's 2 power of 1 then 2 power of 2 then 2 power of 3
+// So it O(log n) which is better than o(n). O(log n) is achieved by divide and conquor.
+// Imagine when you want to reach a node in the third layer of the right-sided nodes. You traverse to the right parent. Right?
+// When you traverse to the right parent, it's like you remove the main parent and the left-sided nodes. We don't have to look back at them.
+
+// Imagine that you have a Tree which has only a right-sided nodes. It's like a Linked List, right? Yeah. So, when you traverse to the right side. 
+// It's O(N), so it's kinda O(log n) when it's Full.
+
+//So, for insert lookup and remove we act as if it's o(log n)
+
+
+// So, imagine if we want to look up for the tail node in a linked list it would be O(N) same as remove()
+// But insert() is O(1) so it's faster than O(log n)
+
+
+// The Structure of a Binary Tree
+// It's like a linked list but with two pointers instead of one ptr (next)// A binary tree 
+// 
+// {
+// value: 4,
+// left: nullptr,
+// right: nullptr
+// }
+
+
+// INSERTING METHOD
+
+//The process of inserting a newNode
+// First we create a node, right?
+// Then, we ask ourselves: is bigger than or smaller than the root?
+// We go to the left, then. We check if there's already a child.
+// If nullptr insert newNode to become the left child of the root. If not, move to next.
+// Then, we ask ourselves: is bigger than or smaller than the root? 
+// Of course you have noticed that we will be using the while loop!
+// There must be a temp ptr which is equal to the root. That must be before the while loop, of course.
+// Here is another case: What if there is no root? Then, we develop a condition. If there's no root? Then, root == newNode. Easy. (That would be above the temp)
+// You cannot have duplicated Nodes, it's either < or > 
+// So, when we need to make sure in the while loop that if temp == newNode, then return false.
+
+
+// CONTAINS METHOD
+
+// We want to check the binary tree contains a specific Node.If it exists, it returns true. If not, it returns false.
+// First, we check if the root is nullptr. If yes, return false.
+// We put another ptr which is temp and it's equal to root and this ptr will help us in searching for a specific Node
+// If the Node->value we're looking for is < the root, then temp ptr moves left and it keeps comparing until it reaches the Node->value
+// Here is a case: What if we keep searching and it happens to be a nullptr Node. Then, we must develop a while loop
+// We will be developing a while loop to make sure the temp traverse as long as the Node is not equal to a nullptr.
+// So, inside of the while loop we will make sure that
+// 1) If the Node-> value we're looking for is < the root->value, then go left.
+// 2) else if it's > the root->value, then go right.
+// 3) If the temp == root->value, then return true
+
+
