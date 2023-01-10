@@ -7,6 +7,10 @@ Hello, world. I'm gargerius, a software developer who has been studying algorith
 Bro Code's channel: 
 https://www.youtube.com/@BroCodez
 
+Scott Barrett's course:
+https://www.udemy.com/course/data-structures-algorithms-cpp
+
+
 
 It is kind of funny to think of how was prospective towards progamming tweleve months ago, like I thought programming was for genius people. I still recall my friend, Zoma, recommeding me to learn programming. My answer was always, 'No'. That was it. I'd refused for numerous reasons and one of them was, apprehension. Then my friend, Amr El-Safy, who is actually my mentor recommended me to study this idotic language, JavaScript. He just recommmended it, that was it. He didn't mention anything else, and I thought: "What would happen? Let's just give it a shot." 
 
