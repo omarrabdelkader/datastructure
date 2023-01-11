@@ -1,0 +1,33 @@
+INTRODUCTION
+
+For me, recursion is my favorite algorithm. Thoralf Albert Skole was a genius for forming such an algorithm, people. However, I view it as the hardest algorithm to understand.]
+It takes time to comprehend it, bro. So, keep solve problems. 
+
+
+Recursion is a method of solving a computational problem where the solution depends on solutions to smaller instances of the same problem.[1][2] Recursion solves such recursive problems by using functions that call themselves from within their own code.
+
+1) Each time, we need to make the problem smaller, in order to end the recursion. Otherwise, it will be looping forever.
+2) A base case is a must in order to end the recursion. 
+
+Example
+
+openGiftBox(){
+
+if(isBall) return Ball; (base case)
+
+openGiftBox(); (recursion)
+
+}
+
+
+Factorial Function:
+
+int factorial (int n) {
+
+if(n == 1) return 1;
+
+return n * factorial(n-1); 
+}
+
+// I know it's hard to understand in this example, but believe me. When you check the traversal algorithm, you will fully comprehend how the recursion works. 
+The Traversal Algorithm depends on recursion.
